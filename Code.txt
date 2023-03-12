@@ -1,1 +1,31 @@
+=> Share Link:
+//"share" is my intent name;
+Intent share = new Intent(android.content.Intent.ACTION_SEND); share.setType("text/plain"); share.putExtra(android.content.Intent.EXTRA_SUBJECT, a); share.putExtra(android.content.Intent.EXTRA_TEXT, b); startActivity(Intent.createChooser(share,"Share using"));
 
+=> Get a custom key value from json data:
+//"res1" is my main array list;
+
+//For multiple json object array list:
+res2 = (new Gson()).toJson(res1.get("data"), new TypeToken<ArrayList<HashMap<String, Object>>>(){}.getType());
+
+//One json object array fetch:
+res2 = (new Gson()).toJson(res1.get("data"),new TypeToken<HashMap<String, Object>>() {}.getType());
+
+
+=> Ripple/hover effect:
+*Ripple Effect On Button,Text View
+
+//put this code in on activity create;
+
+android.graphics.drawable.RippleDrawable mycustomripple = new android.graphics.drawable.RippleDrawable(new android.content.res.ColorStateList(new int[][]{new int[]{}}, new int[]{ Color.GREEN}), new android.graphics.drawable.ColorDrawable(Color.WHITE), null);
+button1.setBackground(mycustomripple);
+
+
+*For drawer button,text view ripple efdect
+
+android.graphics.drawable.RippleDrawable mycustomripple = new android.graphics.drawable.RippleDrawable(new android.content.res.ColorStateList(new int[][]{new int[]{}}, new int[]{ Color.GREEN}), new android.graphics.drawable.ColorDrawable(Color.WHITE), null);
+_drawer_button1.setBackground(mycustomripple);
+
+=> Drower resize:
+//put this code in on activity create;
+LinearLayout _nav_view = (LinearLayout) findViewById(R.id._nav_view); androidx.drawerlayout.widget.DrawerLayout .LayoutParams params = (androidx.drawerlayout.widget.DrawerLayout .LayoutParams)_nav_view.getLayoutParams(); params.width = (int)getDip((int)200); params.height = androidx.drawerlayout.widget.DrawerLayout .LayoutParams.MATCH_PARENT; _nav_view.setLayoutParams(params);
