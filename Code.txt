@@ -29,3 +29,13 @@ _drawer_button1.setBackground(mycustomripple);
 => Drower resize:
 //put this code in on activity create;
 LinearLayout _nav_view = (LinearLayout) findViewById(R.id._nav_view); androidx.drawerlayout.widget.DrawerLayout .LayoutParams params = (androidx.drawerlayout.widget.DrawerLayout .LayoutParams)_nav_view.getLayoutParams(); params.width = (int)getDip((int)200); params.height = androidx.drawerlayout.widget.DrawerLayout .LayoutParams.MATCH_PARENT; _nav_view.setLayoutParams(params);
+
+=> ProgressBar colour change:
+//video-https://youtu.be/mF2I54kgd30
+//need custom block
+
+if (android.os.Build.VERSION.SDK_INT >= 21) {
+
+_progressbar.getIndeterminateDrawable().setColorFilter(Color.parseColor(_color), PorterDuff.Mode.SRC_IN);
+
+}
