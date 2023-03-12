@@ -39,3 +39,7 @@ if (android.os.Build.VERSION.SDK_INT >= 21) {
 _progressbar.getIndeterminateDrawable().setColorFilter(Color.parseColor(_color), PorterDuff.Mode.SRC_IN);
 
 }
+
+=>Stop block alternative:
+//Add in add source directly;
+Code:break;
