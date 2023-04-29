@@ -43,3 +43,15 @@ _progressbar.getIndeterminateDrawable().setColorFilter(Color.parseColor(_color),
 =>Stop block alternative:
 //Add in add source directly;
 Code:break;
+
+
+=>Open google map app
+//Add in add source directly;
+Code:
+Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4194");
+Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+mapIntent.setPackage("com.google.android.apps.maps");
+if (mapIntent.resolveActivity(getPackageManager()) != null) {
+    startActivity(mapIntent);
+}
+
